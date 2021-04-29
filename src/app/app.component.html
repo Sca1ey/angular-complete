@@ -1,5 +1,36 @@
-<div class="container mx-auto px-4 py-4">
-  <h3>I'm the AppComponent!</h3>
+<div class="px-4 py-4">
+  <ol>
+    <li>
+      Add a Input field which updates a property ('username') via
+      Two-Way-Binding
+    </li>
+    <li>
+      Output the username property via String Interpolation (in a paragraph
+      below the input)
+    </li>
+    <li>
+      Add a button which may only be clicked if the username is NOT an empty
+      string
+    </li>
+    <li>
+      Upon clicking the button, the username should be reset to an empty string
+    </li>
+  </ol>
   <hr />
-  <app-servers></app-servers>
+  <label for="">Username</label>
+  <input
+    type="text"
+    class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+    [(ngModel)]="username"
+  />
+  <hr />
+  <p>{{ username }}</p>
+  <hr />
+  <button
+    class="bg-blue-200 px-2 py-2"
+    [disabled]="username === ''"
+    (click)="resetOnClick()"
+  >
+    Click Me
+  </button>
 </div>
