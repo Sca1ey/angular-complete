@@ -2,18 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  //selector: '[app-root]' <div app-root><div/>
-  //selector: '.app-root'  <div class="app-root"><div/>
   templateUrl: './app.component.html',
-  //styleUrls: ['./app.component.css']
-  styles: [
-    `
-      h3 {
-        color: dodgerblue;
-      }
-    `,
-  ],
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular-complete';
+  hide = false;
+  clicks = [];
+  toggle(): void {
+    this.clicks.push(this.clicks.length + 1);
+    this.hide === true ? (this.hide = false) : (this.hide = true);
+  }
 }
