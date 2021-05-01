@@ -1,4 +1,9 @@
 <div>
   <app-shopping-edit></app-shopping-edit>
-  <p>The List</p>
+  <hr />
+  <ul class="list-disc list-inside">
+    <li *ngFor="let item of ingredients">
+      <a>{{ item.name }} : {{ item.amount }}{{ item.unit }} </a>
+    </li>
+  </ul>
 </div>

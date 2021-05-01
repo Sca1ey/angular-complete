@@ -1,1 +1,15 @@
-<app-recipe-item></app-recipe-item>
+<div class="">
+  <button class="btn-blue">New Recipe</button>
+  <div
+    class="grid grid-cols-2 bg-gray-200 px-2 py-2 my-2"
+    *ngFor="let item of recipes"
+  >
+    <h2 class="text-xl">{{ item.name }}</h2>
+    <div class="row-span-2">
+      <img src="{{ item.imagePath }}" alt="{{ item.name }}" />
+    </div>
+    <p>{{ item.description }}</p>
+  </div>
+
+  <app-recipe-item></app-recipe-item>
+</div>
