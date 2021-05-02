@@ -1,0 +1,18 @@
+<p>Add new Servers or blueprints!</p>
+<hr class="my-2" />
+<div class="grid">
+  <label>Server Name</label>
+  <input type="text" class="form-input max-w-lg" [(ngModel)]="newServerName" />
+  <label>Server Content</label>
+  <input
+    type="text"
+    class="form-input max-w-lg"
+    [(ngModel)]="newServerContent"
+  />
+</div>
+<hr class="my-2" />
+<button class="btn-blue mr-2" (click)="onAddServer()">Add Server</button>
+<button class="btn-blue" (click)="onAddBlueprint()">
+  Add Server Blueprint
+</button>
+<hr />
