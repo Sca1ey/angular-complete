@@ -1,8 +1,8 @@
 <div class="p-4">
-  <app-cockpit>
+  <app-cockpit
     (serverCreated)="onServerAdded($event)"
-    (blueprintCreated)="onServerAdded($event)"
-  </app-cockpit>
+    (bpCreated)="onBlueprintAdded($event)"
+  ></app-cockpit>
   <app-server-element
     *ngFor="let serverElement of serverElements"
     [srvElement]="serverElement"
