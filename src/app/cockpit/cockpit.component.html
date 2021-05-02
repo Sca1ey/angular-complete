@@ -2,7 +2,9 @@
 <hr class="my-2" />
 <div class="grid">
   <label>Server Name</label>
-  <input type="text" class="form-input max-w-lg" [(ngModel)]="newServerName" />
+  <!-- <input type="text" class="form-input max-w-lg" [(ngModel)]="newServerName" /> -->
+  <input type="text" class="form-input max-w-lg" #serverNameInput />
+
   <label>Server Content</label>
   <input
     type="text"
@@ -11,8 +13,10 @@
   />
 </div>
 <hr class="my-2" />
-<button class="btn-blue mr-2" (click)="onAddServer()">Add Server</button>
-<button class="btn-blue" (click)="onAddBlueprint()">
+<button class="btn-blue mr-2" (click)="onAddServer(serverNameInput)">
+  Add Server
+</button>
+<button class="btn-blue" (click)="onAddBlueprint(serverNameInput)">
   Add Server Blueprint
 </button>
 <hr class="mt-2" />
