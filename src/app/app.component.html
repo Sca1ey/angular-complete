@@ -1,10 +1,10 @@
 <div class="p-4">
-  <app-cockpit></app-cockpit>
+  <app-cockpit>
+    (serverCreated)="onServerAdded($event)"
+    (blueprintCreated)="onServerAdded($event)"
+  </app-cockpit>
   <app-server-element
-    *ngFor
-    let
-    serverElement
-    of
-    serverElement
+    *ngFor="let serverElement of serverElements"
+    [srvElement]="serverElement"
   ></app-server-element>
 </div>
