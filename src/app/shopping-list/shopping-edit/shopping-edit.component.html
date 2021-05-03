@@ -2,15 +2,15 @@
   <form class="grid grid-cols-3 gap-2 mb-2 max-w-lg">
     <div class="col-span-3">
       <label for="name">Name</label>
-      <input id="name" type="text" class="form-input" />
+      <input id="name" type="text" class="form-input" #nameInput />
     </div>
     <div>
       <label for="amount">Amount</label>
-      <input id="amount" type="text" class="form-input" />
+      <input id="amount" type="text" class="form-input" #amountInput />
     </div>
     <div>
       <label for="unit">Unit</label>
-      <input id="unit" type="text" class="form-input" />
+      <input id="unit" type="text" class="form-input" #unitInput />
     </div>
     <div class="col-start-1 flex">
       <button class="btn-green mr-1" type="submit">Add</button>
