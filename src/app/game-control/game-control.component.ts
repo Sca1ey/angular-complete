@@ -6,8 +6,8 @@ import { Component, OnInit, Output } from '@angular/core';
   styleUrls: ['./game-control.component.css'],
 })
 export class GameControlComponent {
-  @Output() interval;
-  @Output() value: number = 0;
+  interval;
+  @Output('counterValue') value: number = 0;
 
   start() {
     this.interval = setInterval(() => {
