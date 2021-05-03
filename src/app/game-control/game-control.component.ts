@@ -1,4 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
+import * as EventEmitter from 'node:events';
 
 @Component({
   selector: 'app-game-control',
@@ -6,13 +7,15 @@ import { Component, OnInit, Output } from '@angular/core';
   styleUrls: ['./game-control.component.css'],
 })
 export class GameControlComponent {
+  value: number = 0;
   interval;
-  @Output('counterValue') value: number = 0;
+  @Output('valueEvent') event: EventEmitter = new EventEmitter();
 
   start() {
     this.interval = setInterval(() => {
       this.value++;
       console.log(this.value);
+      this.event.emit(this.value);
     }, 2000);
     console.log('Start');
   }
