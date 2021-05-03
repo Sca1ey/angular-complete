@@ -7,11 +7,7 @@ import { Recipe } from './recipe.model';
   styleUrls: ['./recipes.component.css'],
 })
 export class RecipesComponent implements OnInit {
-  recipeDetail: Recipe = {
-    name: 'Test',
-    description: 'Test',
-    imagePath: 'Image',
-  };
+  recipeDetail: Recipe;
 
   constructor() {}
 

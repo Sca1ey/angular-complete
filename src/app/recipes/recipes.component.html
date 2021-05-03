@@ -4,6 +4,9 @@
   ></app-recipe-list>
   <app-recipe-detail
     class="col-span-2"
+    *ngIf="recipeDetail; else infoText"
     [recipeDetail]="recipeDetail"
-  ></app-recipe-detail>
+  >
+  </app-recipe-detail>
+  <ng-template #infoText> Please select a recipe! </ng-template>
 </div>
