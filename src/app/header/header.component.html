@@ -6,8 +6,18 @@
     <h1 class="text-indigo-600 text-2xl">Recipes</h1>
   </a>
   <nav class="flex flex-row m:flex-column space-x-6 font-semibold">
-    <a href="#" class="text-indigo-600 hover:underline">Recipes</a>
-    <a href="#" class="text-indigo-600 hover:underline">Shopping List</a>
+    <a
+      href="#"
+      class="text-indigo-600 hover:underline"
+      (click)="onMenuClick('recipes')"
+      >Recipes</a
+    >
+    <a
+      href="#"
+      class="text-indigo-600 hover:underline"
+      (click)="onMenuClick('shopping')"
+      >Shopping List</a
+    >
     <a href="#" class="text-indigo-600 hover:underline">Manage</a>
   </nav>
 </header>
