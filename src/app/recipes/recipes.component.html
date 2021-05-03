@@ -1,4 +1,9 @@
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-  <app-recipe-list></app-recipe-list>
-  <app-recipe-detail class="col-span-2"></app-recipe-detail>
+  <app-recipe-list
+    (selectedRecipe)="onRecipeSelected($event)"
+  ></app-recipe-list>
+  <app-recipe-detail
+    class="col-span-2"
+    [recipeDetail]="recipeDetail"
+  ></app-recipe-detail>
 </div>

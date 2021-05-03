@@ -1,13 +1,13 @@
 <div>
   <div>
-    <img src="" alt="image" />
+    <img src="{{ recipeDetail.imagePath }}" alt="image" />
   </div>
-  <h1 class="text-3xl">Recipe Name</h1>
+  <h1 class="text-3xl">{{ recipeDetail.name }}</h1>
   <div class="flex">
     <button class="btn-blue mr-1">Add to List</button>
     <button class="btn-blue mr-1">Edit</button>
     <button class="btn-red">Delete</button>
   </div>
-  <p>The decription here</p>
+  <p>{{ recipeDetail.description }}</p>
   <p>Ingredients</p>
 </div>
