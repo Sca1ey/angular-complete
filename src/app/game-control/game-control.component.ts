@@ -1,5 +1,4 @@
-import { Component, Output } from '@angular/core';
-import * as EventEmitter from 'node:events';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-game-control',
@@ -14,8 +13,8 @@ export class GameControlComponent {
   start() {
     this.interval = setInterval(() => {
       this.value++;
-      console.log(this.value);
       this.valueEvent.emit({ value: this.value });
+      console.log(this.value);
     }, 2000);
     console.log('Start');
   }
