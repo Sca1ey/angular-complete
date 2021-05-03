@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import * as EventEmitter from 'node:events';
 
 @Component({
@@ -9,13 +9,13 @@ import * as EventEmitter from 'node:events';
 export class GameControlComponent {
   value: number = 0;
   interval;
-  @Output('valueEvent') event: EventEmitter = new EventEmitter();
+  @Output() valueEvent = new EventEmitter<{ value: number }>();
 
   start() {
     this.interval = setInterval(() => {
       this.value++;
       console.log(this.value);
-      this.event.emit(this.value);
+      this.valueEvent.emit({ value: this.value });
     }, 2000);
     console.log('Start');
   }
