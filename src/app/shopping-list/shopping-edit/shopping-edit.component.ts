@@ -5,6 +5,7 @@ import {
   ViewChild,
   EventEmitter,
 } from '@angular/core';
+import { Ingredient } from 'src/app/shared/ingredient.model';
 
 @Component({
   selector: 'app-shopping-edit',
@@ -16,11 +17,7 @@ export class ShoppingEditComponent implements OnInit {
   @ViewChild('amountInput', { static: true }) amountInput;
   @ViewChild('unitInput', { static: true }) unitInput;
 
-  @Output() ingredient = new EventEmitter<{
-    name: string;
-    amount: number;
-    unit: string;
-  }>();
+  @Output() ingredient = new EventEmitter<Ingredient>();
 
   constructor() {}
 
