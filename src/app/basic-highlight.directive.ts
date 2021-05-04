@@ -4,7 +4,7 @@ import { element } from 'protractor';
 @Directive({
   selector: '[appBasicHighlight]',
 })
-export class BasicHighlightDirective {
+export class BasicHighlightDirective implements OnInit {
   constructor(private elementRef: ElementRef) {}
 
   ngOnInit() {
