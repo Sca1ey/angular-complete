@@ -1,2 +1,5 @@
 <h1 appBasicHighlight>Basic Highlight</h1>
 <h1 [appBetterHighlight]="'red'" defaultColor="green">Better Highlight</h1>
+<div *ngFor="let number of numbers">
+  <p *appUnless="number % 2 === 0">{{ number }}</p>
+</div>
